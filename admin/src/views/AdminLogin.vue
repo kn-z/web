@@ -13,12 +13,6 @@ export default {
   components: {
     LoginBackground,
   },
-  data(){
-    return{
-      email:'',
-      password:''
-    }
-  },
 }
 
 </script>

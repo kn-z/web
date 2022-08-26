@@ -7,7 +7,7 @@ import '@/assets/css/components.chunk.css'
 import '@/assets/theme/black.css'
 
 
-axios.defaults.baseURL = 'http://hkt.knyun.xyz:3000/api/v1'
+axios.defaults.baseURL = '/proxy'
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false

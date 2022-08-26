@@ -24,6 +24,7 @@
 
 <script>
 import AlertBox from "@/components/AlertBox";
+import adminLogin from "@/views/AdminLogin";
 
 const validateEmail = (email) => {
   return email.match(
@@ -53,7 +54,6 @@ export default {
   },
   methods:{
     inputValid(){
-      clearInterval(this.timer)
       let email = this.formData.email
       let passwd = this.formData.password
 
@@ -61,22 +61,34 @@ export default {
       else if (!validateEmail(email)) this.alertMsg= "请输入正确邮箱"
       else if (!passwd.trim()) this.alertMsg= "密码不能为空"
       else if (passwd.trim().length < 8) this.alertMsg= "密码必须大于 8 个字符"
-      else {
-        const res =  this.$http.post('login',this.formData)
-        console.log(res)
-        return 0
-      }
+      else return this.adminLogin()
 
+      this.showAlertMsg(this.alertMsg)
 
+    },
+
+    async adminLogin(){
+      const {data : res} = await this.$http.post('login',{
+        "username":"zw6979014@gmail.com",
+        "password":"Aa112211"
+      })
+      if (res.status !== 200) return this.showAlertMsg(res.message)
+      sessionStorage.setItem('token',res.token)
+      this.$router.push('dashboard')
+      console.log(res)
+    },
+
+    showAlertMsg(msg){
+      clearInterval(this.timer)
+      this.alertMsg= msg
       this.isShow = true
       this.timer = setInterval(()=>{
         this.isShow = false
         clearInterval(this.timer)
       },3000)
     },
-
     closeAlert(){
-      console.log(this.isShow)
+      this.isShow = false
     }
   }
 }
