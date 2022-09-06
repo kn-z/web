@@ -1,10 +1,28 @@
 <template>
-$END$
+  <div id="root">
+    <div id="page-container" class="sidebar-o sidebar-dark page-header-dark side-scroll page-header-fixed main-content-boxed side-trans-enabled false">
+      <div class="v2board-nav-mask" style="display: none;"></div>
+      <SideBar/>
+      <PageHeader/>
+      <MainContainer/>
+    </div>
+  </div>
+
 </template>
 
+
 <script>
+import SideBar from "@/components/SideBar";
+import PageHeader from "@/components/PageHeader";
+import MainContainer from "@/components/MainContainer";
+
 export default {
-name: "UserView"
+  name: "UserView",
+  components: {
+    PageHeader,
+    SideBar,
+    MainContainer
+  }
 }
 </script>
 

@@ -13,8 +13,9 @@
     </div>
     <div class="content-side content-side-full">
     <SideBarList/>
-
-    </div><div class="KNcloud-copyright">KNcloud v1.6.0</div></nav>
+    </div>
+    <div class="KNcloud-copyright">KNcloud v1.6.0</div>
+  </nav>
 </template>
 
 <script>

@@ -1,12 +1,11 @@
 <template>
-
   <div class="row no-gutters">
     <div class="col-md-12 order-md-1 bg-white">
       <div class="block-content block-content-full px-lg-4 py-md-4 py-lg-4">
         <div class="mb-3 text-center"><a class="font-size-h1" href="javascript:void(0);">
           <img class="v2board-logo mb-3" src="https://www.kncloud.top/KNcloud.png">
         </a>
-          <p class="font-size-sm text-muted mb-3">登录到管理中心</p></div><div class="form-group">
+          <p class="font-size-sm text-muted mb-3">{{title}}</p></div><div class="form-group">
         <input type="text" class="form-control form-control-alt" placeholder="邮箱" v-model="formData.email">
       </div>
         <div class="form-group">
@@ -24,7 +23,6 @@
 
 <script>
 import AlertBox from "@/components/AlertBox";
-import adminLogin from "@/views/AdminLogin";
 
 const validateEmail = (email) => {
   return email.match(
@@ -38,6 +36,7 @@ export default {
   components:{
     AlertBox
   },
+  props:["title", "type"],
   data(){
     return{
       formData:{
@@ -46,11 +45,8 @@ export default {
       },
       alertTitle:'无效请求',
       alertMsg:'',
-      isShow:false
+      isShow:false,
     }
-  },
-  computed:{
-
   },
   methods:{
     inputValid(){
@@ -61,20 +57,21 @@ export default {
       else if (!validateEmail(email)) this.alertMsg= "请输入正确邮箱"
       else if (!passwd.trim()) this.alertMsg= "密码不能为空"
       else if (passwd.trim().length < 8) this.alertMsg= "密码必须大于 8 个字符"
-      else return this.adminLogin()
+      else return this.Login()
 
       this.showAlertMsg(this.alertMsg)
 
     },
 
-    async adminLogin(){
+    async Login(){
       const {data : res} = await this.$http.post('login',{
-        "username":"zw6979014@gmail.com",
-        "password":"Aa112211"
+        "email": this.formData.email,
+        "password": this.formData.password
       })
       if (res.status !== 200) return this.showAlertMsg(res.message)
       sessionStorage.setItem('token',res.token)
-      this.$router.push('dashboard')
+      if (this.type === 0) await this.$router.push('dashboard')
+      else await this.$router.push('items')
       console.log(res)
     },
 

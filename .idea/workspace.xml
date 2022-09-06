@@ -5,19 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1b07692-7531-4c89-9fe2-a5f26e4a30b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/src/components/MainContainer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/components/PageHeader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/components/SideBar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/components/SideBarItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/components/SideBarList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/views/AdminView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/assets/css/umi.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/assets/css/umi.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/assets/AdminLogin_no.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/ItemInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/ItemInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/ItemList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/ItemList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/LoginFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/LoginFooter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/components/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/LoginForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/MainContainer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/MainContainer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/PageHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/PageHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/SideBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/SideBarItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/SideBarItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/SideBarList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/SideBarList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/AdminLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/AdminLogin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/AdminView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/AdminView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/UserLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/UserLogin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/UserSignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/UserSignUp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/UserView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/UserView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +41,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2ChVSS7YJnug2p6E98McrKy78Pf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -45,36 +52,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Files/Desktop/web/admin/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/Files/Desktop/web/admin/src/views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ssh.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Files\Desktop\web\admin\src\views" />
       <recent name="D:\Files\Desktop\web\admin\public" />
       <recent name="D:\Files\Desktop\web\admin\src\assets" />
       <recent name="D:\Files\Desktop\web\admin\src\assets\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Files\Desktop\web\admin\src\assets" />
+      <recent name="D:\Files\Desktop\web\admin\src\views" />
       <recent name="D:\Files\Desktop\web\admin\public" />
       <recent name="D:\Files\Desktop\web\admin\src\assets\css" />
-      <recent name="D:\Files\Desktop\web\admin\src\assets" />
     </key>
   </component>
   <component name="RunManager">

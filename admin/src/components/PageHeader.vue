@@ -4,15 +4,12 @@
       <div class="sidebar-toggle" style="display: none;">
         <button type="button" class="btn btn-primary mr-1 d-lg-none">
           <i class="fa fa-fw fa-bars"></i></button></div>
-      <div class="v2board-container-title text-white">仪表盘</div>
+      <div class="v2board-container-title text-white">{{title}}</div>
       <div>
-        <div class="dropdown d-inline-block">
-          <button type="button" class="btn btn-primary mr-1">
-            <i class="far fa fa-sun"></i></button></div>
         <div class="dropdown d-inline-block">
           <button type="button" class="btn btn-primary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="far fa fa-user-circle"></i>
-            <span class="d-none d-lg-inline ml-1">kncloud@gmail.com</span>
+            <span class="d-none d-lg-inline ml-1">{{email}}</span>
             <i class="fa fa-fw fa-angle-down ml-1"></i></button>
           <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg p-0 false" aria-labelledby="page-header-user-dropdown">
             <div class="p-2">
@@ -27,7 +24,13 @@
 
 <script>
 export default {
-  name: "PageHeader"
+  name: "PageHeader",
+  data(){
+    return{
+      title: "管理页面",
+      email: "login"
+    }
+  }
 }
 </script>
 

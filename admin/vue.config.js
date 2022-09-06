@@ -7,7 +7,7 @@ module.exports = defineConfig({
     allowedHosts: "all",
     proxy:{
       'proxy':{
-        target:'http://hkt.knyun.xyz:3000/api/v1', // 这是根路径
+        target:'http://go.knyun.xyz:3000/api/v1', // 这是根路径
         changeOrigin:true,
         pathRewrite: {
           '^/proxy': ''
