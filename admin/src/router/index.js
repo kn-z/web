@@ -44,6 +44,11 @@ router.beforeEach((to, from, next) =>{
   }else {
     next()
   }
+  if (!token && to.path === '/dashboard'){
+    next('/admin')
+  }else {
+    next()
+  }
 })
 
 export default router

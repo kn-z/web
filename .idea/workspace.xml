@@ -5,24 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1b07692-7531-4c89-9fe2-a5f26e4a30b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/src/components/DropDownItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/components/DropDownMenu.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/assets/AdminLogin_no.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/ItemInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/ItemInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/ItemList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/ItemList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/components/LoginFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/LoginFooter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/LoginForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/MainContainer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/MainContainer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/components/PageHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/PageHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/components/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/SideBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/SideBarItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/SideBarItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/SideBarList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/SideBarList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/AdminLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/AdminLogin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/AdminView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/AdminView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/UserLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/UserLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/UserSignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/UserSignUp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/UserView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/UserView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

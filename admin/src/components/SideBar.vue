@@ -6,7 +6,7 @@
           <span class="text-white-75">KNcloud</span></a>
         <div class="d-lg-none">
           <a class="text-white ml-2" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0);">
-            <i class="fa fa-times-circle"></i>
+            <i class="fa fa-times-circle" @click = "CloseSide"></i>
           </a>
         </div>
       </div>
@@ -25,6 +25,11 @@ export default {
   name: "SideBar",
   components:{
     SideBarList
+  },
+  methods: {
+    CloseSide() {
+      this.$bus.$emit('switchSide', 0)
+    }
   }
 }
 </script>

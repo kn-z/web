@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-show="1-type" class="text-center bg-gray-lighter p-3 px-4"><a>忘记密码</a></div>
+    <div v-show="!type" class="text-center bg-gray-lighter p-3 px-4"><a>忘记密码</a></div>
 <!--    <AlertBox/>-->
     <div v-show="type">
       <div class="text-left bg-gray-lighter p-3 px-4">
