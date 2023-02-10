@@ -1,4 +1,4 @@
-# test
+# web
 
 ## Project setup
 ```
