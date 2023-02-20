@@ -2,19 +2,12 @@
   <div class="ant-drawer-body">
     <div>
       <div>
-        <div class="form-group"><label for="example-text-input-alt">商品名称</label><input placeholder="请输入套餐名称"
+        <div class="form-group"><label for="example-text-input-alt">商品名称</label><input placeholder="请输入商品名称"
                                                                                            type="text" class="ant-input"
                                                                                            value=""></div></div>
       <div class="ant-row" style="margin-left: -5px; margin-right: -5px;">
         <div class="ant-col ant-col-md-12" style="padding-left: 5px; padding-right: 5px;">
           <div class="form-group"><label for="example-text-input-alt">商品价格</label><span
-              class="ant-input-group-wrapper"><span class="ant-input-wrapper ant-input-group"><input type="text"
-                                                                                                     class="ant-input"
-                                                                                                     value=""><span
-              class="ant-input-group-addon">¥</span></span></span></div>
-        </div>
-        <div class="ant-col ant-col-md-12" style="padding-left: 5px; padding-right: 5px;">
-          <div class="form-group"><label for="example-text-input-alt">重置包</label><span
               class="ant-input-group-wrapper"><span class="ant-input-wrapper ant-input-group"><input type="text"
                                                                                                      class="ant-input"
                                                                                                      value=""><span
@@ -45,16 +38,10 @@
       </i><span>提 交</span></button>
     </div>
   </div>
-  </div>
 </template>
 
 <script>
 
-const validateEmail = (email) => {
-  return email.match(
-      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  );
-};
 
 export default {
   name: "AddGoods",

@@ -1,6 +1,6 @@
 <template>
   <tr :class=style @mouseover="changeFocus" @mouseleave="clearFocus" data-row-key="0" style="height: 54px;" >
-    <td class="" style="text-align: right;"><a @click="edit"
+    <td class="" style="  text-align: right;"><a @click="edit"
                                                class="ant-dropdown-trigger">操作 <i
         aria-label="图标: caret-down" class="anticon anticon-caret-down">
       <svg viewBox="0 0 1024 1024" focusable="false" class="" data-icon="caret-down"

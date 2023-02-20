@@ -55,6 +55,21 @@ export default {
     clearFocus(){
       this.$bus.$emit('switchUSIFocus', null)
     },
+            startTimer() {
+            clearInterval(this.timer);
+            this.timer = setInterval(() => {
+                this.waiting()
+            }, 500); // 注意: 第一个参数为方法名的时候不要加括号;
+        },
+                waiting() {
+            if (this.waitingLabel.length < 3) {
+                this.waitingLabel += '.'
+            } else {
+                this.waitingLabel = '.'
+            }
+        },
+
+
   },
   mounted() {
     this.$bus.$on('switchUSFocus',(data)=>{

@@ -52,12 +52,6 @@ export default {
     return {
     }
   },
-  computed:{
-    url(){
-      // "http://hkt.knyun.xyz:8080/#/items/"+this.data.outTradeNo
-      return +this.data.outTradeNo
-    }
-  },
   methods:{
     showCami(outTradeNo) {
       let isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
@@ -68,7 +62,7 @@ export default {
         else{
           const width = window.innerWidth / 3;
           const height = window.innerHeight / 2;
-          window.open("http://hk.knyun.xyz:8080/#/items/"+outTradeNo,'','width='+width+',height='+height);
+          window.open(this.$host + "/#/items/"+outTradeNo,'','width='+width+',height='+height);
         }
       }
   },

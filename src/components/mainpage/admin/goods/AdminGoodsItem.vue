@@ -23,7 +23,6 @@
       </svg>
     </i> {{ goods.stock }}
     </td>
-    <td class="">{{goods.content}}</td>
     <td class="ant-table-fixed-columns-in-body" style="text-align: right;"><a href="javascript:void(0);"
                                                                               class="ant-dropdown-trigger">操作 <i
         aria-label="图标: caret-down" class="anticon anticon-caret-down">
@@ -86,7 +85,7 @@ export default {
     async formatInfo(){
     },
     changeStatus(){
-      this.status = 1 - this.status
+      this.status = !this.status
       this.submit()
     }
   },

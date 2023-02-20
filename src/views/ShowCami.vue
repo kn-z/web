@@ -3,6 +3,8 @@
     <div>
       <div class="block-content-full bg-gray-lighter p-3"><span class="tag___12_9H">查看卡密</span>
       </div>
+        <div class="block-content-full bg-gray-lighter p-3"><span class="tag___12_9H">{{}}</span>
+        </div>
       <div
           class="bg-white js-chat-messages block-content block-content-full text-wrap-break-word overflow-y-auto content___DW5w1">
         <CamiItem v-for="data in dataset"

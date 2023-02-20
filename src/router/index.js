@@ -6,6 +6,7 @@ import UserView from "@/views/UserView";
 import UserLogin from "@/views/UserLogin";
 import MyTest from "@/views/MyTest";
 import ShowCami from "@/views/ShowCami";
+import AIChatView from "@/views/AIChatView.vue";
 
 
 Vue.use(VueRouter)
@@ -96,6 +97,11 @@ const routes = [
     path: '/backend/notice',
     name: 'noticeManager',
     component: UserView
+  },
+  {
+    path: '/chat',
+    name: 'aiChatView',
+    component: AIChatView
   },
 ]
 

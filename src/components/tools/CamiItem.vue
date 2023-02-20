@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="font-size-sm text-muted my-2 text-center">{{data.title}}</div>
+<!--    <div class="font-size-sm text-muted my-2 text-center">{{data.title}}</div>-->
     <div class="my-2 text-center">
       <div class="tag-read d-inline-block bg-success-lighter px-3 py-2 mb-2 mw-100 rounded text-left" @click="copy">{{data.cami}}</div>
     </div>

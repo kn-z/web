@@ -1,9 +1,13 @@
 const { defineConfig } = require('@vue/cli-service')
+const apiTarget = "http://localhost:3000/api/v1"
+
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave:false,//禁用ESlint
   devServer: {
-    host: 'hk.knyun.xyz',
+    host: '0.0.0.0',
+    // compress: true,
+    allowedHosts: "all",
     port:8080,
     client: {
       webSocketURL: 'ws://0.0.0.0:8080/ws',
@@ -11,14 +15,16 @@ module.exports = defineConfig({
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
-
     proxy:{
       'proxy':{
-        target:'http://hk.knyun.xyz:3000/api/v1', // 这是根路径
+        target:apiTarget, // 这是根路径
         changeOrigin:true,
         pathRewrite: {
           '^/proxy': ''
-        }
+        },
+        fallback: {
+          "fs": false
+        },
       }
     }
   }
