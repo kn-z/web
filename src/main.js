@@ -7,10 +7,14 @@ import '@/assets/css/components.chunk.css'
 import '@/assets/theme/black.css'
 
 
-axios.defaults.baseURL = '/proxy'
+// axios.defaults.baseURL = '/proxy'
+// Vue.prototype.$host = 'http://fk.kncloud.live:8080'
+
+axios.defaults.baseURL = 'http://fk.kncloud.live/api'
+Vue.prototype.$host = 'http://fk.kncloud.live'
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
-Vue.prototype.$host = 'http://fk.kncloud.live'
+
 
 
 axios.interceptors.request.use(

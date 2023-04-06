@@ -47,15 +47,15 @@
                                                             <thead class="ant-table-thead">
                                                             <tr>
                                                                 <th class=""><span class="ant-table-header-column"><div><span
-                                                                        class="ant-table-column-title">ID</span><span
+                                                                        class="ant-table-column-title">排序</span><span
+                                                                        class="ant-table-column-sorter"></span></div></span>
+                                                                </th>
+                                                                <th class=""><span class="ant-table-header-column"><div><span
+                                                                        class="ant-table-column-title">显隐</span><span
                                                                         class="ant-table-column-sorter"></span></div></span>
                                                                 </th>
                                                                 <th class=""><span class="ant-table-header-column"><div><span
                                                                         class="ant-table-column-title">类别</span><span
-                                                                        class="ant-table-column-sorter"></span></div></span>
-                                                                </th>
-                                                                <th class=""><span class="ant-table-header-column"><div><span
-                                                                        class="ant-table-column-title">销售状态</span><span
                                                                         class="ant-table-column-sorter"></span></div></span>
                                                                 </th>
                                                                 <th class=""><span class="ant-table-header-column"><div><span
@@ -80,7 +80,7 @@
                                                             </tr>
                                                             </thead>
                                                             <tbody class="ant-table-tbody">
-                                                            <AdminGoodsItem v-if="!isLoading" :pageDict="pageDict"
+                                                            <AdminGoodsItem :pageDict="pageDict"
                                                                             :dictKey="dictKey"
                                                                             v-for="goods in this.data"
                                                                             :key="goods.id"
@@ -127,7 +127,7 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody class="ant-table-tbody">
-                                                                <AdminGoodsSetItem v-if="!isLoading"
+                                                                <AdminGoodsSetItem
                                                                                    :pageDict="pageDict"
                                                                                    :dictKey="dictKey"
                                                                                    v-for="goods in this.data"
@@ -172,6 +172,7 @@
                 </div>
             </div>
         </div>
+        <div :style="showLine ? 'position: fixed; z-index: 9999; height: 0px; margin-top: -1px; border-bottom: 2px dashed rgba(0, 0, 0, 0.3); display: block; left: 274px; width: 1300px; top: 300px;' : 'position: fixed; z-index: 9999; height: 0px; margin-top: -1px; border-bottom: 2px dashed rgba(0, 0, 0, 0.3); display: none; left: 274px; width: 1300px; top: 300px;'" class=""></div>
     </div>
 </template>
 
@@ -199,6 +200,7 @@ export default {
             dictKey: "02",
             isLoading: true,
             data: '',
+            showLine: false,
         }
     },
     methods: {
@@ -206,7 +208,6 @@ export default {
             this.isLoading = true
             const {data: res} = await this.$http.get('goods/all')
             this.data = res.data
-            console.log(this.data)
             this.isLoading = false
         },
         async getCategoryList() {
@@ -218,17 +219,23 @@ export default {
             //Send selector's data list to SelectDropDownMenu
             this.$bus.$emit('selectorList', newArr)
             this.isLoading = false
-
         },
         add() {
-            this.$bus.$emit('openRB', this.dictKey + 'A')
+            this.$bus.$emit( this.pageDict[this.dictKey].getRBTName, 'A')
+            this.$bus.$emit('openRB', this.dictKey)
         },
+        switchLine(){
+            this.showLine = !this.showLine
+        }
     },
     mounted() {
         this.getGoodsList()
         this.getCategoryList()
         this.$bus.$on(this.pageDict[this.dictKey].methodName, () => {
             this.getGoodsList()
+        })
+        this.$bus.$on('switchLine', () => {
+            this.switchLine()
         })
     }
 }

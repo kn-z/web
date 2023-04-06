@@ -47,16 +47,6 @@
               </button>
             </div>
 
-            <!--            <div  class="v2board-table-action"> ¥ {{ good.price }} x {{ formData.buyAmount }}-->
-            <!--  <button type="button" class="btn btn-primary"><span><i-->
-            <!--    class="fa fa-minus"></i></span>-->
-            <!--</button>-->
-            <!--  <input type="text" class="v2board-input-coupon text-center" placeholder="购买数量"-->
-            <!--         v-model="formData.buyAmount" onkeyup="this.value=this.value.replace(/\D|^0/g,'')">-->
-            <!-- <button type="button" class="btn btn-primary btn-left"><span><i-->
-            <!--    class="fa fa-plus"></i></span>-->
-            <!--</button>-->
-            <!--</div>-->
           </div>
           <div class="pt-3" style="color: rgb(100, 102, 105);">总计</div>
           <h1 class="text-light mt-3 mb-3">¥ {{ totalAmount }}</h1>
@@ -111,7 +101,7 @@ export default {
 
   watch: {
     $route() {
-      if (this.$route.fullPath.indexOf("/good/") !== -1) {
+      if (this.$route.fullPath.indexOf("/goods/") !== -1) {
         this.isLoading = true
         this.getGood()
       }

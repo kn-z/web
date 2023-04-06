@@ -60,8 +60,10 @@ export default {
               onAbort => {})
         }
         else{
-          const width = window.innerWidth / 3;
-          const height = window.innerHeight / 2;
+          // const width = window.innerWidth / 3;
+          // const height = window.innerHeight / 2;
+          const width = 450
+          const height = 650
           window.open(this.$host + "/#/items/"+outTradeNo,'','width='+width+',height='+height);
         }
       }

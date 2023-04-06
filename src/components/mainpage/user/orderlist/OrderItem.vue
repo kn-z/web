@@ -10,7 +10,7 @@
           class="ant-badge-status-text"></span></span>{{ status }}
       </div>
     </td>
-    <td class="">{{ createdAt }} </td>
+    <td class="createdAt">{{ createdAt }} </td>
   </tr>
 </template>
 

@@ -3,7 +3,7 @@
     <td class="ant-table-column-has-actions ant-table-column-has-sorters">{{user.id}}</td>
     <td class=""><span><span class="ant-badge-status-text"></span>{{user.email}}</span></td>
     <td class="ant-table-column-has-actions ant-table-column-has-sorters"><span
-        class="ant-tag ant-tag-green">正常</span></td>
+        :class="user.status === 1 ? 'ant-tag ant-tag-red':'ant-tag ant-tag-green'">{{user.status === 1 ? '封禁' : '正常'}}</span></td>
     <td class="ant-table-column-has-actions ant-table-column-has-sorters">{{user.role ? '管理员' : '普通用户'}}</td>
     <td class="ant-table-column-has-actions ant-table-column-has-sorters">{{createdAt}}
     </td>

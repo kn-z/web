@@ -2,7 +2,7 @@
   <main id="main-container">
     <GoodsPage v-if="item==='01'"/>
     <OrderInfo :sideDict="sideDict" v-if="item==='02'"/>
-    <CreateOrderPage v-if="item==='03'"/>
+    <BuyPage v-if="item==='03'"/>
     <OrdersPage v-if="item==='04'"/>
 
     <DashBoard v-if="item==='11'"/>
@@ -13,12 +13,11 @@
     <ManagePay :pageDict="pageDict" v-if="item==='16'"/>
     <ManageCategory :pageDict="pageDict" v-if="item==='17'"/>
     <ManageNotice :pageDict="pageDict" v-if="item==='18'"/>
-
   </main>
 </template>
 <script>
 
-import CreateOrderPage from "@/components/mainpage/user/buy/BuyPage";
+import BuyPage from "@/components/mainpage/user/buy/BuyPage";
 import GoodsPage from "@/components/mainpage/user/goods/GoodsPage";
 import OrderInfo from "@/components/mainpage/user/orderinfo/OrderInfo";
 import OrdersPage from "@/components/mainpage/user/orderlist/OrdersPage";
@@ -35,7 +34,7 @@ export default {
   name: "MainContainer",
   props: ['loginType', 'sideDict','pageDict'],
   components: {
-    CreateOrderPage,
+    BuyPage,
     GoodsPage,
     OrderInfo,
     OrdersPage,

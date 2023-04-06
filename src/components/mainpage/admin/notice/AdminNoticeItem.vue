@@ -1,12 +1,13 @@
 <template>
   <tr :class=style @mouseover="changeFocus" @mouseleave="clearFocus" data-row-key="0">
     <td class="">{{ notice.id }}</td>
-    <td class="">
-      <button @click="changeStatus" type="button" role="switch" aria-checked="true"
-              :class="status ? 'ant-switch-small ant-switch ant-switch-checked':'ant-switch-small ant-switch'"><span
-          class="ant-switch-inner"></span></button>
-    </td>
-    <td class="">{{ notice.title }}</td>
+
+      <td class="">
+          <button @click="changeStatus" type="button" role="switch" aria-checked="true"
+                  :class="status ? 'ant-switch-small ant-switch ant-switch-checked':'ant-switch-small ant-switch'"><span
+                  class="ant-switch-inner"></span></button>
+      </td>
+      <td class="">{{ notice.title }}</td>
     <td class="" style="text-align: right;">{{ createdAt }}</td>
     <td class="ant-table-fixed-columns-in-body" style="text-align: right;">
       <div><a href="javascript:void(0);">编辑</a>

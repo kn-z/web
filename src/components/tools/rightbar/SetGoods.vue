@@ -13,8 +13,8 @@
                                 v-model="showPrice"><span
                                 class="ant-input-group-addon">CNY</span></span></span></div>
                     </div>
-                    <div class="form-group"><label><span>所属类别</span></label>
-                        <div @click="setSelectorPos" ref="selector"
+                    <div class="form-group" title="选择类别"><label><span>所属类别</span></label>
+                        <div @click="setSelectorPos(goods.cateId)" ref="selector"
                              :class="selected ? 'ant-select ant-select-open ant-select-focused ant-select-enabled form-group' : 'ant-select ant-select-enabled form-group'"
                              style="width: 100%;">
                             <div class="ant-select-selection ant-select-selection--single" role="combobox"
@@ -22,7 +22,7 @@
                                  aria-controls="63c5b191-6ada-4935-d770-5a29756e6295"
                                  aria-expandant-select-selection__rendereded="false" tabindex="0">
                                 <div class="ant-select-selection__rendered">
-                                    <div class="ant-select-selection-selected-value" title="无"
+                                    <div class="ant-select-selection-selected-value"
                                          style="display: block; opacity: 1;">{{ getName(goods.cateId) }}
                                     </div>
                                 </div>
@@ -82,6 +82,7 @@ export default {
             isSubmit: false,
             selected: false,
             selectorList: [],
+            type: '',
             goods: {
                 title: '', price: '', name: '', image: '', content: '',
             },
@@ -122,15 +123,28 @@ export default {
                 this.isSubmit = false
                 return
             }
-
-            const {data: res} = await this.$http.put('good/' + this.id, {
-                "title": this.goods.title,
-                "price": this.goods.price,
-                "image": this.goods.image,
-                "content": this.goods.content,
-                "cateId": this.goods.cateId,
-                "status": this.goods.status,
-            })
+            let res = {}
+            if (this.type === 'A') {
+                const {data: resp} = await this.$http.post('good/add', {
+                    "title": this.goods.title,
+                    "price": this.goods.price,
+                    "image": this.goods.image,
+                    "content": this.goods.content,
+                    "cateId": this.goods.cateId,
+                    "status": this.goods.status,
+                })
+                res = resp
+            } else {
+                const {data: resp} = await this.$http.put('good/' + this.id, {
+                    "title": this.goods.title,
+                    "price": this.goods.price,
+                    "image": this.goods.image,
+                    "content": this.goods.content,
+                    "cateId": this.goods.cateId,
+                    "status": this.goods.status,
+                })
+                res = resp
+            }
             if (res.status !== 200) {
                 let tip = {
                     tipTitle: "请求失败",
@@ -150,6 +164,7 @@ export default {
         close() {
             this.$bus.$emit('closeRB')
         },
+
         clear() {
             this.goods = {
                 title: '', price: '', name: '', image: '', content: '',
@@ -161,15 +176,26 @@ export default {
             this.id = data
             this.getGoods()
         })
-        this.$bus.$on(this.pageDict[this.dictKey].clearRBName, () => {
-            this.clear()
+
+        this.$bus.$on(this.pageDict[this.dictKey].getRBTName, (type) => {
+            this.type = type
+            if (this.type === 'A') {
+                this.clear()
+            }
         })
+
         this.$bus.$on('selectorClose', () => {
             this.selected = false
         })
-        //Get selectrooList
+
+        //Get selector List
         this.$bus.$on('selectorList', (data) => {
             this.selectorList = data
+        })
+
+        //Get selected ID
+        this.$bus.$on('selectorID', (id) => {
+            this.goods.cateId = id
         })
     }
 }

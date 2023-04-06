@@ -2,7 +2,7 @@
   <div class="row">
         <GoodsItem v-for="good in showGoods"
                    :key="good.id"
-                   :good="good"
+                   :goods="good"
         />
   </div>
 </template>

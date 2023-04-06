@@ -1,4 +1,4 @@
-<template>
+  <template>
   <tr :class=style @mouseover="changeFocus" @mouseleave="clearFocus" data-row-key="0" style="height: 54px;" >
     <td class="" style="text-align: right;"><a @click="edit"
                                                class="ant-dropdown-trigger">操作 <i

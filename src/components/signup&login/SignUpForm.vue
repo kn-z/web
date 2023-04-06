@@ -128,7 +128,7 @@ export default {
     async signUp() {
       this.changeLoading()
       if (this.inputValid()) {
-        const {data: res} = await this.$http.post('user/add', {
+        const {data: res} = await this.$http.post('user/create', {
           "email": this.formData.email + this.emailTypes.emailType,
           "password": this.formData.password,
           "verify": this.formData.verify

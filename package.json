@@ -16,6 +16,7 @@
     "element-resize-detector": "^1.2.4",
     "event-source-polyfill": "^1.0.31",
     "fs": "^0.0.1-security",
+    "highlight.js": "^10.7.3",
     "path": "^0.12.7",
     "qrcodejs2": "^0.0.2",
     "stream": "^0.0.2",

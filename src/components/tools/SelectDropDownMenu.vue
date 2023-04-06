@@ -64,12 +64,15 @@ export default {
             }
         }
     },
+
     methods: {
         close() {
             this.$bus.$emit('selectorClose')
+            this.$bus.$emit('SelectDropDownItem_ClearCount')
             this.selectDropDown.isShow = false
         }
     },
+
     mounted() {
         //Get selector position
         this.$bus.$on('selectorPos', (data) => {
@@ -81,8 +84,9 @@ export default {
         this.$bus.$on('selectorData', (data) => {
             this.data = data
         })
+
         //Get selector focused id
-        this.$bus.$on('selectorID', (data) => {
+        this.$bus.$on('selectorFocusedID', (data) => {
             this.id = data
         })
     }
