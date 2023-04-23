@@ -14,7 +14,7 @@
         <li @click="reload(1)" title="1"
             :class="flag===1 ? 'ant-pagination-item ant-pagination-item ant-pagination-item-active' : 'ant-pagination-item ant-pagination-item'"
             tabindex="0"><a>1</a></li>
-        <li @click=jumpPage(-5) v-show="(flag-1)>4" title="向前 5 页" tabindex="0"
+        <li @click=jumpPage(-5) v-show="(flag-1)>=4" title="向前 5 页" tabindex="0"
             class="ant-pagination-jump-prev ant-pagination-jump-prev-custom-icon"><a
                 class="ant-pagination-item-link">
             <div class="ant-pagination-item-container"><i aria-label="图标: double-left"
@@ -30,7 +30,7 @@
                     :key="no"
                     :no="no"
         />
-        <li @click=jumpPage(5) v-show="(fin-flag)>4" title="向后 5 页" tabindex="0"
+        <li @click=jumpPage(5) v-show="(fin-flag)>=4" title="向后 5 页" tabindex="0"
             class="ant-pagination-jump-next ant-pagination-jump-next-custom-icon"><a
                 class="ant-pagination-item-link">
             <div class="ant-pagination-item-container"><i aria-label="图标: double-right"
@@ -105,8 +105,16 @@ export default {
             this.flag = flag
         },
         jumpPage(num) {
-            if (this.flag > 1 && this.flag < this.fin) {
-                this.flag += num
+            if (this.flag >= 1 && this.flag <= this.fin) {
+                //
+                if (num > 0){
+                    const target = this.flag += num
+                    this.flag = (target > this.fin ? this.fin : target)
+                }
+                else {
+                    const target = this.flag += num
+                    this.flag = (target < 1 ? 1 : target)
+                }
             }
         },
         reload(no) {

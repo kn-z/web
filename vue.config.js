@@ -3,13 +3,14 @@ const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  lintOnSave:false,//禁用ESlint
+  //禁用ES lint
+  lintOnSave:false,
   devServer: {
     host: '0.0.0.0',
     allowedHosts: "all",
-    port:8080,
+    port:443,
     client: {
-      webSocketURL: 'ws://0.0.0.0:8080/ws',
+      webSocketURL: 'ws://0.0.0.0:443/ws',
     },
     headers: {
       'Access-Control-Allow-Origin': '*',

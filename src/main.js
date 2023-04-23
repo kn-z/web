@@ -10,10 +10,15 @@ import '@/assets/theme/black.css'
 // axios.defaults.baseURL = '/proxy'
 // Vue.prototype.$host = 'http://fk.kncloud.live:8080'
 
-axios.defaults.baseURL = 'http://fk.kncloud.live/api'
-Vue.prototype.$host = 'http://fk.kncloud.live'
+
+// api url
+axios.defaults.baseURL = 'https://store.ktno.cc/api'
+// web url
+Vue.prototype.$host = 'https://store.ktno.cc'
+
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
+
 
 
 
