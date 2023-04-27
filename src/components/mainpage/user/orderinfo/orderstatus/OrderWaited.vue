@@ -34,9 +34,10 @@
                     <div class="block-header block-header-default"><h3 class="block-title">支付方式</h3>
                         <div class="block-options"></div>
                     </div>
-                    <PaymentItem  v-for="payment in this.paymentList"
-                                  :key="payment.id"
-                                  :payment="payment"/>
+                    <PaymentItem :selected=selectedPayment
+                                 v-for="payment in this.paymentList"
+                                 :key="payment.id"
+                                 :payment="payment"/>
                 </div>
             </div>
             <div class="col-md-4 col-sm-12">
@@ -105,7 +106,8 @@ export default {
         return {
             isShowQR: 0,
             isRequesting: false,
-            paymentList:'',
+            paymentList: '',
+            selectedPayment: 1,
         }
     },
     watch: {
@@ -141,6 +143,7 @@ export default {
             this.isRequesting = true
             const {data: res} = await this.$http.post('pay', {
                 "outTradeNo": this.data.outTradeNo,
+                "paymentId": this.selectedPayment,
             })
             if (res.status !== 200) {
                 let tip = {
@@ -218,6 +221,10 @@ export default {
     mounted() {
         this.checkOrder()
         this.getPaymentList()
+        this.$bus.$on('switchPM', (data) => {
+            console.log(data)
+            this.selectedPayment = data
+        })
     }
 }
 </script>
