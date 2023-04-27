@@ -42,8 +42,8 @@
                                                                     class="ant-table-column-sorter"></span></div></span>
                                                             </th>
                                                             <th class=""><span class="ant-table-header-column"><div><span
-                                                                class="ant-table-column-title">标题</span><span
-                                                                class="ant-table-column-sorter"></span></div></span>
+                                                                    class="ant-table-column-title">标题</span><span
+                                                                    class="ant-table-column-sorter"></span></div></span>
                                                             </th>
                                                             <th class="ant-table-align-right"
                                                                 style="text-align: right;"><span
@@ -145,7 +145,7 @@ export default {
         }
     },
     methods: {
-        async getNoticeList() {
+        async getAllNotice() {
             this.isLoading = true
             const {data: res} = await this.$http.get('notice/all')
             this.data = res.data
@@ -157,9 +157,9 @@ export default {
         },
     },
     mounted() {
-        this.getNoticeList()
+        this.getAllNotice()
         this.$bus.$on(this.pageDict[this.dictKey].methodName, () => {
-            this.getNoticeList()
+            this.getAllNotice()
         })
     }
 }

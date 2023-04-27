@@ -34,9 +34,9 @@
                         <SetUser :dictKey="'01'" :pageDict="pageDict" v-show="page.type.indexOf('01') > -1 && !this.isLoading"/>
                         <SetGoods :dictKey="'02'" :pageDict="pageDict"  v-show="page.type.indexOf('02') > -1 && !this.isLoading"/>
                         <SetCami :dictKey="'03'" :pageDict="pageDict" v-show="page.type.indexOf('03') > -1 && !this.isLoading"/>
-                        <SetOrder :dictKey="'04'" :pageDict="pageDict" v-show="page.type.indexOf('04') > -1"/>
+                        <SetOrder :dictKey="'04'" :pageDict="pageDict" v-show="page.type.indexOf('04') > -1 && !this.isLoading"/>
                         <SetCategory :dictKey="'05'" :pageDict="pageDict" v-show="page.type.indexOf('05') > -1 && !this.isLoading"/>
-                        <SetPay :dictKey="'06'" :pageDict="pageDict" v-show="page.type.indexOf('06') > -1 && !this.isLoading"/>
+                        <SetPayment :dictKey="'06'" :pageDict="pageDict" v-show="page.type.indexOf('06') > -1 && !this.isLoading"/>
                         <SetNotice :dictKey="'07'" :pageDict="pageDict" v-show="page.type.indexOf('07') > -1 && !this.isLoading"/>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ import SetOrder from "@/components/tools/rightbar/SetOrder";
 
 import SetCategory from "@/components/tools/rightbar/SetCategory";
 
-import SetPay from "@/components/tools/rightbar/SetPay";
+import SetPayment from "@/components/tools/rightbar/SetPayment.vue";
 
 import SetNotice from "@/components/tools/rightbar/SetNotice";
 
@@ -75,7 +75,7 @@ export default {
         SetOrder,
         SetCategory,
         SetNotice,
-        SetPay,
+        SetPayment,
     },
     data() {
         return {

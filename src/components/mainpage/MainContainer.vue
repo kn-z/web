@@ -1,19 +1,19 @@
 <template>
-  <main id="main-container">
-    <GoodsPage v-if="item==='01'"/>
-    <OrderInfo :sideDict="sideDict" v-if="item==='02'"/>
-    <BuyPage v-if="item==='03'"/>
-    <OrdersPage v-if="item==='04'"/>
+    <main id="main-container">
+        <GoodsPage v-if="item==='01'"/>
+        <OrderInfo :sideDict="sideDict" v-if="item==='02'"/>
+        <BuyPage v-if="item==='03'"/>
+        <OrdersPage v-if="item==='04'"/>
 
-    <DashBoard v-if="item==='11'"/>
-    <ManageUser :pageDict="pageDict" v-if="item==='12'"/>
-    <ManageGoods :pageDict="pageDict" v-if="item==='13'"/>
-    <ManageCami :pageDict="pageDict" v-if="item==='14'"/>
-    <ManageOrder :pageDict="pageDict" v-if="item==='15'"/>
-    <ManagePay :pageDict="pageDict" v-if="item==='16'"/>
-    <ManageCategory :pageDict="pageDict" v-if="item==='17'"/>
-    <ManageNotice :pageDict="pageDict" v-if="item==='18'"/>
-  </main>
+        <DashBoard v-if="item==='11'"/>
+        <ManageUser :pageDict="pageDict" v-if="item==='12'"/>
+        <ManageGoods :pageDict="pageDict" v-if="item==='13'"/>
+        <ManageCami :pageDict="pageDict" v-if="item==='14'"/>
+        <ManageOrder :pageDict="pageDict" v-if="item==='15'"/>
+        <ManagePayment :pageDict="pageDict" v-if="item==='16'"/>
+        <ManageCategory :pageDict="pageDict" v-if="item==='17'"/>
+        <ManageNotice :pageDict="pageDict" v-if="item==='18'"/>
+    </main>
 </template>
 <script>
 
@@ -27,53 +27,54 @@ import ManageGoods from "@/components/mainpage/admin/goods/ManageGoods";
 import ManageCami from "@/components/mainpage/admin/cami/ManageCami";
 import ManageOrder from "@/components/mainpage/admin/order/ManageOrder";
 import ManageCategory from "@/components/mainpage/admin/category/ManageCategory";
-import ManagePay from "@/components/mainpage/admin/pay/ManagePay";
+import ManagePayment from "@/components/mainpage/admin/payment/ManagePayment.vue";
 import ManageNotice from "@/components/mainpage/admin/notice/ManageNotice";
 
 export default {
-  name: "MainContainer",
-  props: ['loginType', 'sideDict','pageDict'],
-  components: {
-    BuyPage,
-    GoodsPage,
-    OrderInfo,
-    OrdersPage,
-    ManageUser,
-    DashBoard,
-    ManageGoods,
-    ManageCami,
-    ManageOrder,
-    ManageCategory,
-    ManagePay,
-    ManageNotice
-  },
-  data() {
-    return {
-      item: undefined,
-    }
-  },
-  watch: {
-    $route() {
-      this.pageManager()
-    }
-  },
-  methods: {
-    pageManager() {
-      for (const idx in this.sideDict) {
-        const side = this.sideDict[idx]
-        if (this.$route.fullPath.indexOf(side.path) !== -1) {
-          this.item = side.id
-          this.$bus.$emit('changeTitle', side.name)
+    name: "MainContainer",
+    props: ['loginType', 'sideDict', 'pageDict'],
+    components: {
+        BuyPage,
+        GoodsPage,
+        OrderInfo,
+        OrdersPage,
+        ManageUser,
+        DashBoard,
+        ManageGoods,
+        ManageCami,
+        ManageOrder,
+        ManageCategory,
+        ManagePayment,
+        ManageNotice
+    },
+    data() {
+        return {
+            item: undefined,
         }
-      }
-    }
-  },
-  mounted() {
-    this.pageManager()
-    this.$bus.$on('switchMainContainer', (data) => {
-      this.item = data
-    })
-  },
+    },
+    watch: {
+        $route() {
+            this.pageManager()
+        }
+    },
+    methods: {
+        pageManager() {
+            for (const idx in this.sideDict) {
+                const side = this.sideDict[idx]
+                if (this.$route.fullPath.indexOf(side.path) !== -1) {
+                    this.item = side.id
+                    this.$bus.$emit('changeTitle', side.name)
+                    break
+                }
+            }
+        }
+    },
+    mounted() {
+        this.pageManager()
+        this.$bus.$on('switchMainContainer', (data) => {
+            this.item = data
+        })
+    },
 }
 </script>
 

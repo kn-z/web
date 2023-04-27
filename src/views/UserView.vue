@@ -82,7 +82,7 @@ export default {
                 '05E': {name: "编辑类别",},
                 '05A': {name: "添加类别",},
 
-                '06': {methodName: 'reloadPaymentList', reloadRBName: 'reloadSPM', getRBTName: 'getSPMType',},
+                '06': {methodName: 'reloadPaymentList', reloadRBName: 'reloadSPM', getRBTName: 'getSPMType', switchItemFocus:'switchPMIFocus', switchSetFocus:'switchPMSFocus'},
                 '06E': {name: "编辑支付方式",},
                 '06A': {name: "添加支付方式",},
 
@@ -163,9 +163,9 @@ export default {
                 ]
             } else {
                 return [
+                    {id: "03", name: "购买商品", inSide: 0, icon: "nav-main-link-icon si si-bag", path: '/goods/'},
                     {id: "01", name: "购买商品", inSide: 1, icon: "nav-main-link-icon si si-bag", path: '/goods'},
                     {id: "02", name: "订单详情", inSide: 0, icon: "nav-main-link-icon si si-bag", path: '/order/info/'},
-                    {id: "03", name: "购买商品", inSide: 0, icon: "nav-main-link-icon si si-bag", path: '/good/'},
                     {id: "04", name: "订单查询", inSide: 1, icon: "nav-main-link-icon si si-list", path: '/order/list'},
                 ]
             }

@@ -34,7 +34,7 @@ export default {
         edit() {
             this.$bus.$emit('RBReload')
             this.$bus.$emit(this.pageDict[this.dictKey].reloadRBName, this.notice.id)
-            this.$bus.$emit( this.pageDict[this.dictKey].getRBTName, 'E')
+            this.$bus.$emit(this.pageDict[this.dictKey].getRBTName, 'E')
             this.$bus.$emit('openRB', this.dictKey)
         }
     },

@@ -1,4 +1,4 @@
-<template>
+selectorList<template>
     <div class="ant-drawer-body">
         <div>
             <div>
@@ -73,7 +73,7 @@
 import {mixin} from '@/mixin'
 
 export default {
-    name: "EditGoods",
+    name: "SetGoods",
     props: ['pageDict', 'dictKey'],
     mixins: [mixin],
     data() {

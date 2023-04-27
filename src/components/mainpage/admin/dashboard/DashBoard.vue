@@ -51,9 +51,9 @@
             <div class="d-flex align-items-center">
               <div class="pr-4 pr-sm-5 pl-0 pl-sm-3"><p class="fs-3 text-dark mb-0">0.00 CNY</p>
                 <p class="text-muted mb-0">本月收入</p></div>
-              <div class="px-4 px-sm-5 border-start"><p class="fs-3 text-dark mb-0">582.50 CNY</p>
+              <div class="px-4 px-sm-5 border-start"><p class="fs-3 text-dark mb-0">0.00 CNY</p>
                 <p class="text-muted mb-0">上月收入</p></div>
-              <div class="px-4 px-sm-5 border-start"><p class="fs-3 text-dark mb-0">42.00 CNY</p>
+              <div class="px-4 px-sm-5 border-start"><p class="fs-3 text-dark mb-0">0.00 CNY</p>
                 <p class="text-muted mb-0">上月佣金支出</p></div>
               <div class="px-4 px-sm-5 border-start"><p class="fs-3 text-dark mb-0">-</p>
                 <p class="text-muted mb-0">本月新增用户</p></div>
