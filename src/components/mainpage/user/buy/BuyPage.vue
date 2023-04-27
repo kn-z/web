@@ -10,13 +10,13 @@
           <div class="v2board-plan-content">库存 {{ good.stock }}</div>
         </div>
         <div class="block block-rounded js-appear-enabled">
-          <div class="block-header block-header-default"><h3 class="block-title">商品描述</h3>
+          <div class="block-header block-header-default"><h3 class="block-title">商品</h3>
             <div class="block-options"></div>
           </div>
           <div data-v-42f4bad4="" class="ant-modal-body">
             <div data-v-42f4bad4="" id="qrcode">
               <canvas width="250" height="250" style="display: none;"></canvas>
-              <img object-fit="contain" alt="pic" style="display: block;" :src=good.image>
+              <img object-fit="contain" alt="pic" style="display: block; text-align: center; max-width: 100%; max-height: 100%;" :src=good.image>
             </div>
           </div>
         </div>

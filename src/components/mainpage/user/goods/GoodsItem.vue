@@ -3,7 +3,7 @@
         <div data-v-42f4bad4="" class="block-header plan" style="justify-content: space-around;">
             <canvas width="250" height="250" style="display: none;"></canvas>
             <img object-fit="contain" alt="pic"
-                 style="display: block;text-align: center;max-width: 300px; max-height: 200px;" :src=goods.image>
+                 style="display: block;text-align: center;max-width: 100%; max-height: 100%;" :src=goods.image>
             <!--          <img object-fit="contain" alt="pic" style="display: block;text-align: center;" :src=goods.image>-->
         </div>
         <!--    <div class="block-header plan"><h3 class="block-title">{{ good.title }}</h3>-->
