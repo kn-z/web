@@ -7,6 +7,7 @@ import UserLogin from "@/views/UserLogin";
 import MyTest from "@/views/MyTest";
 import ShowCami from "@/views/ShowCami";
 import AIChatView from "@/views/AIChatView.vue";
+import NotFound from "@/views/NotFound.vue";
 
 
 Vue.use(VueRouter)
@@ -103,6 +104,11 @@ const routes = [
         name: 'aiChatView',
         component: AIChatView
     },
+    // 定义 notFound 路径
+    {path: '*', name: 'notFound', component: NotFound},
+
+    // 定义 catchAll 路径
+    {path: '/:**', name: 'catchAll', component: NotFound}
 ]
 
 const router = new VueRouter({
